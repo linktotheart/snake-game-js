@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+	<title>SNake</title>
+</head>
+<style>
+	body {
+		font-family: 'Press Start 2P', cursive;
+		background-color: #6eb122;
+	}
+	#container {
+		text-align: center;
+		margin: 2rem auto 0;
+	} 
+	#score {
+		font-size: 36px;
+		color: #131f06;
+	}
+	#gameSnake {
+		border: 12px solid #131f06;
+	}
+	.btn {
+  font-size: 1em;
+  font-family: 'Press Start 2P', cursive;
+  width: 200px;
+  height: 60px;
+  background: #548719;
+  border: 0px;
+  position: relative;
+  box-shadow: 
+    inset -4px 2px 1px 1px grey,
+    inset -4px -2px 1px 1px lightgray,
+    inset 4px 0px 1px 1px lightgray;   
+}
+
+.btn:hover {
+  cursor: pointer;
+	background-color: #497813;
+}
+
+.btn:active {
+  top: 5px;
+  box-shadow: 
+    -4px 2px 1px 1px grey,
+    -4px -2px 1px 1px lightgray,
+    4px 0px 1px 1px lightgray; 
+}
+
+.btn::after {
+  content: '';
+  background: black;
+  position: absolute;
+  left: -2.5%;
+  top: 0;
+  width: 105%;
+  height: 100%;
+  z-index: -1;
+}
+
+.btn::before {
+  content: '';
+  background: black;
+  position: absolute;
+  left: 0;
+  top: -5%;
+  width: 100%;
+  height: 113%;
+  z-index: -1;
+}
+.game{ 
+	margin: 2rem auto;
+}
+</style>
+<body>
+	<div id="container">
+		<span id="score">0</span>
+		<div class="game">
+			<canvas id="gameSnake" width="480" height="480"></canvas>
+		</div>
+		<button class="btn" id="restart">Restart</button>
+	</div>
+</body>
+<script src="./main.js"></script>
+</html>

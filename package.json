@@ -1,0 +1,15 @@
+{
+  "name": "snake-game-js",
+  "version": "1.0.0",
+  "description": "new snake game made in javascript",
+  "main": "index.js",
+  "scripts": {
+    "test": "/"
+  },
+  "keywords": [
+    "snake",
+    "javascript"
+  ],
+  "author": "pulkit singh",
+  "license": "ISC"
+}
